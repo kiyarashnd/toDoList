@@ -1,0 +1,53 @@
+/* #div1 {
+    width: 350px;
+    height: 70px;
+    padding: 10px;
+    border: 1px solid #aaaaaa;
+}
+
+#drag1 {
+    cursor: pointer;
+}
+
+.drag--over {
+    opacity: 0.5;
+} */
+
+
+#box1 {
+    background-color: red;
+}
+
+#box2 {
+    background-color: blue;
+
+}
+
+#box3 {
+    background-color: green;
+
+}
+
+#box4 {
+    background-color: black;
+}
+
+.common {
+    width: 300px;
+    height: 100px;
+    border-color: green;
+    border-style: solid;
+    border-width: 1px;
+}
+
+#parent {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#parent>div {
+    float: left;
+    clear: none;
+    margin-left: 10px;
+}
