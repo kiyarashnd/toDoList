@@ -103,10 +103,6 @@ function completed(event) {
     divElement.firstElementChild.addEventListener('change', returns);
 }
 
-function myf2() {
-    console.log('hi2')
-}
-
 //make a new div element and add to tdl local storage and remove from completed list and comtdl local storge :
 function returns(event) {
     let idItem = String(event.target.parentNode.id);
@@ -256,11 +252,4 @@ function afterReloadcom(work, index) {
     divElement.querySelector('.edit').addEventListener('click', editText);
 
     divElement.querySelector('input').checked = true;
-}
-function myf() {
-    console.log('hi');
-}
-
-function myf3() {
-    console.log('hasdlhfka')
 }
