@@ -260,3 +260,7 @@ function afterReloadcom(work, index) {
 function myf() {
     console.log('hi');
 }
+
+function myf3() {
+    console.log('hasdlhfka')
+}
