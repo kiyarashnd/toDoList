@@ -107,3 +107,5 @@ function drop(e) {
 function allowDrop(e) {
     e.preventDefault();
 }
+
+console.log('config review')
