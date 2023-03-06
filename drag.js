@@ -1,4 +1,4 @@
-/*const div1 = document.getElementById('div1');
+const div1 = document.getElementById('div1');
 div1.addEventListener('drop', drop);
 
 const para = document.getElementById('drag1');
@@ -10,7 +10,6 @@ div1.addEventListener('dragover', allowDrop);
 
 //drag function fire when we drag element 
 function drag(ev) {
-    console.log(ev.target.id)
     //ev.target.id is id of element that is dragged
     ev.dataTransfer.setData("kiya", ev.target.id);
 }
@@ -18,18 +17,16 @@ function drag(ev) {
 //this fucntion run every time that you mouse over element inside div1 elemenet
 function allowDrop(ev) {
     ev.preventDefault();
-    console.log(1)
-    para.classList.add('drag--over')
 }
 
 function drop(ev) {
     ev.preventDefault();
-    para.classList.remove('drag--over')
     //Get the dragged data with the dataTransfer.getData() method. This method will return any data that was set to the same type in the setData() method
     let data = ev.dataTransfer.getData("kiya");
     //this line drop document.getElementById(data) to ev.target
     ev.target.appendChild(document.getElementById(data));
-}*/
+}
+/*
 //moshkel koja bud?
 //vaghti function e drop run mishod va jaye 2 ta element avaz mishod dg event listener barash register nashode bud
 const box1 = document.getElementById('box1');
@@ -106,6 +103,4 @@ function drop(e) {
 
 function allowDrop(e) {
     e.preventDefault();
-}
-
-console.log('config review')
+}*/

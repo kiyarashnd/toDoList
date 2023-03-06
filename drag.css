@@ -1,4 +1,4 @@
-/* #div1 {
+#div1 {
     width: 350px;
     height: 70px;
     padding: 10px;
@@ -9,11 +9,7 @@
     cursor: pointer;
 }
 
-.drag--over {
-    opacity: 0.5;
-} */
-
-
+/*
 #box1 {
     background-color: red;
 }
@@ -50,4 +46,4 @@
     float: left;
     clear: none;
     margin-left: 10px;
-}
+}*/
