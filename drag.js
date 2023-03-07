@@ -1,25 +1,36 @@
-const div1 = document.getElementById('div1');
-div1.addEventListener('drop', drop);
-
+//watch this for know concept and use input file field drag-drop
+//https://www.youtube.com/watch?v=OHTudicK7nY
+//dragstart event run when we drag draggable element
 const para = document.getElementById('drag1');
-
 para.addEventListener('dragstart', drag);
+
+const div1 = document.getElementById('div1');
+const div2 = document.getElementById('div2');
+
 //dragover event specifies where the dragged data can be dropped.
 div1.addEventListener('dragover', allowDrop);
+div2.addEventListener('dragover', allowDrop);
+
+//drop event run when user drop element in drop zone
+div1.addEventListener('drop', drop);
+div2.addEventListener('drop', drop)
 
 
 //drag function fire when we drag element 
 function drag(ev) {
-    //ev.target.id is id of element that is dragged
+    console.log('drag start event')
+    //ev.target.id is id of element that is dragged and can be any thing else like string
+    //this second paramter transfet to anywhere we get data!
     ev.dataTransfer.setData("kiya", ev.target.id);
 }
 
-//this fucntion run every time that you mouse over element inside div1 elemenet
 function allowDrop(ev) {
+    console.log('dragover event')
     ev.preventDefault();
 }
 
 function drop(ev) {
+    console.log('drop event')
     ev.preventDefault();
     //Get the dragged data with the dataTransfer.getData() method. This method will return any data that was set to the same type in the setData() method
     let data = ev.dataTransfer.getData("kiya");
@@ -62,7 +73,6 @@ function drag(e) {
 
 function drop(e) {
     e.preventDefault();
-    // console.log(e.target)
     clone = e.target.cloneNode(true);
     let data = e.dataTransfer.getData("text");
     if (clone.id !== data) {
