@@ -4,12 +4,11 @@
  background-image: linear-gradient(to right, #215f00, #e4e4d9); 
  background-size: cover; 
  background-repeat: no-repeat; 
-}*/
-
-
-body {
-    background-image: linear-gradient(to right, #3e92cc, #2a628f, #16324f, #18435a);
 }
+
+/* body {
+    background-image: linear-gradient(to right, #3e92cc, #2a628f, #16324f, #18435a);
+} */
 
 header {
     display: flex;
@@ -21,7 +20,7 @@ header {
 
 h1 {
     font-family: 'Roboto Mono';
-    color: white;
+    color: #0c630c;
     font-size: 2rem;
 }
 
@@ -62,6 +61,8 @@ div {
     font-size: 2rem;
     font-family: 'Roboto Mono', monospace;
     transform: translateY(-8px);
+    /* isolation: isolate; */
+    color: blue;
 }
 
 input[type="text"] {
