@@ -22,6 +22,8 @@ h1 {
     font-family: 'Roboto Mono';
     color: #0c630c;
     font-size: 2rem;
+    /* for don't change the color of h1 element after dark mode */
+    isolation: isolate;
 }
 
 
@@ -29,21 +31,12 @@ h1 {
     font-family: 'Roboto Mono';
     color: #0c630c;
     font-size: 1.5rem;
+    isolation: isolate;
 }
 
 .head {
     width: 60%;
 }
-
-/* 
-.text-cut-out {
-    text-align: center;
-    width: 300px;
-    transform: translateX(500px);
-    padding: 12px;
-    background-color: white;
-    mix-blend-mode: screen;
-} */
 
 .container {
     display: flex;
@@ -62,7 +55,7 @@ div {
     font-family: 'Roboto Mono', monospace;
     transform: translateY(-8px);
     /* isolation: isolate; */
-    color: blue;
+    color: #38a3a5;
 }
 
 input[type="text"] {
@@ -97,7 +90,8 @@ input[type="text"]:focus {
     background: none;
 
     /* color: #b6be9c; */
-    color: #000;
+    /* color: #000; */
+    color: #38a3a5;
 }
 
 #Add:hover,
@@ -182,7 +176,8 @@ P {
 }
 
 .edit:hover {
-    color: black;
+    color: #007200;
+
 }
 
 @media (max-width:820px) {
@@ -193,6 +188,14 @@ P {
 
     input[type="text"]:focus {
         width: 250px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    #time {
+        font-size: 1rem;
     }
 }
 
@@ -217,7 +220,6 @@ P {
     body {
         background-repeat: repeat;
     }
-
 }
 
 .display {
@@ -244,4 +246,77 @@ P {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
     background: #555;
+}
+
+
+
+.darkmode-layer {
+    position: fixed;
+    pointer-events: none;
+    background: #fff;
+    transition: all 0.3s ease;
+    mix-blend-mode: difference;
+}
+
+.darkmode-layer--button {
+    width: 2.9rem;
+    height: 2.9rem;
+    border-radius: 50%;
+    right: 32px;
+    bottom: 32px;
+    left: unset;
+}
+
+.darkmode-layer--simple {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform: scale(1) !important;
+}
+
+.darkmode-layer--expanded {
+    transform: scale(100);
+    border-radius: 0;
+}
+
+.darkmode-layer--no-transition {
+    transition: none;
+}
+
+.darkmode-toggle {
+    background: #100f2c;
+    width: 3rem;
+    height: 3rem;
+    position: fixed;
+    border-radius: 50%;
+    right: 32px;
+    bottom: 32px;
+    left: unset;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.darkmode-toggle--white {
+    background: #fff;
+}
+
+.darkmode-background {
+    background: #fff;
+    position: fixed;
+    pointer-events: none;
+    z-index: -10;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+img,
+.darkmode-ignore {
+    isolation: isolate;
+    display: inline-block;
 }
