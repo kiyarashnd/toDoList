@@ -256,7 +256,7 @@ function afterReloadcom(work, index) {
 
 //add a dark mode to website get help from https://www.youtube.com/watch?v=lJmw3zoEt3g
 const options = {
-    bottom: '550px', // default: '32px'
+    bottom: '50px', // default: '32px'
     right: '32px', // default: '32px'
     // left: 'unset', // default: 'unset'
     time: '0.5s', // default: '0.3s'
